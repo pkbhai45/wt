@@ -1,1 +1,105 @@
+Q1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Form</title>
+    <style>
+        body {
+            background-color: yellow;
+        }
+ h1 {
+       font-size: 6pt;
+            color: red;
+            text-align: center;
+        }
+        .form-container {
+            background-color: #66CCCC;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .form-container label {
+           display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="radio"] {
+            width: auto;
+        }
+        .form-container button {
+            width: 48%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button.clear {
+            background-color: blue;
+        }
+        .form-container button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project Management</h1>
+    <div class="form-container">
+        <form>
+            <label for="project-name">Project Name</label>
+            <input type="text" id="project-name" placeholder="project name">
+            <label for="assigned-to">Assigned to</label>
+            <select id="assigned-to">
+                <option>Er Merry Petison</option>
+                <!-- Add more options as needed -->
+            </select>
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" placeholder="dd-mm-yyyy">
+           <label for="end-date">End Date</label>
+         <input type="date" id="end-date" placeholder="dd-mm-yyyy">
+            <label for="priority">Priority</label>
+            <input type="radio" id="high" name="priority" value="high">
+            <label for="high" style="display:inline;">High</label>
+            <input type="radio" id="average" name="priority" value="average">
+            <label for="average" style="display:inline;">Average</label>
+            <input type="radio" id="low" name="priority" value="low">
+            <label for="low" style="display:inline;">Low</label>
+            <label for="description">Description</label>
+            <textarea id="description" rows="4" placeholder="Enter description"></textarea>
+            <button type="submit">Submit</button>
+            <button type="reset" class="clear">Clear</button>
+        </form>
+    </div>
+</body>
+</html>
 
+                               Q2 A
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('iris.csv')
+species_count = df['species'].value_counts()
+plt.figure(figsize=(6, 6))
+plt.pie(species_count, labels=species_count.index, autopct='%1.1f%%', startangle=90, colors=['skyblue', 'lightgreen', 'lightcoral'])
+plt.title('Frequency of Iris Species')
+plt.axis('equal')
+plt.show()
+
+                               Q2 B
+import pandas as pd
+df = pd.read_csv('winequality-red.csv')
+basic_stats = df.describe()
+print(basic_stats)
