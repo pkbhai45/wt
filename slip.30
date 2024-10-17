@@ -7,13 +7,18 @@ Create a RDB in 3NF for the above and solve the following. Using above database 
 script in PHP to accept a competition name from user and display information of student
 who has secured 1st rank in that competition.
 HTML File
+
 <html>
 <form action=slip30.php method=get>
 Enter Comp. Name<input type=text name=t1><br>
 <input type=submit value="Display Ranker">
 </form>
 </html>
+
+
+
 PHP File
+
 <?php
 $con=pg_connect("host=localhost user=postgres password=nrc dbname=slip30");
 $cn=$_GET['t1'];
