@@ -24,3 +24,32 @@ growth
 worldwide</p>
  </html>
 
+Q2A) 
+
+import pandas as p
+
+d=p.read_csv('C:\\Users\\DELL\\Untitled Folder\\Iris.csv')
+
+#remove id field from iris dataset
+
+new_data = d[["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"]] 
+
+print(new_data)
+
+plt.figure(figsize = (10, 7))
+
+new_data.boxplot()
+
+Q2B)
+
+import pandas as p
+
+df = pd.read_csv('C:\\Users\\DELL\\ht&wt.csv')
+
+df.shape # no.of rows & cols
+
+df.describe() #stats data
+
+df.info() #features
+
+df.dtypes
