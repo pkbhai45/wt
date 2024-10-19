@@ -1,8 +1,6 @@
 
-Slip 1: Write the HTML code for generating the form as shown below. Apply the
-internal CSS to following form to change the font size of the heading to 6pt and change
-the color to red and also change the background color to yellow.
-Solution:
+Q1
+
 <html>
 <head>
 <title>slip 1</title>
@@ -41,3 +39,21 @@ value="description"></td></tr>
  </body>
  </html>
 
+Q2A)
+
+import pandas as pd
+import matplotlib.pyplot as plt
+d = pd.read_csv('C:\\Users\\DELL\\Untitled Folder\\Iris.csv')
+ax=plt.subplots(1,1,figsize=(10,8))
+d['Species'].value_counts().plot.pie()
+plt.title("Iris Species %")
+plt.show()
+
+Q2B)
+
+import pandas as p
+df = pd.read_csv('C:\\Users\\DELL\\winequality-red.csv')
+df.shape
+df.describe()
+df.info()
+df.dtypes
