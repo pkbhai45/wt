@@ -27,3 +27,43 @@ Item No Item Name PriceRs. Paise1 Programming in Python 500 502 Programming in J
 </tr>
 </body>
 </html>
+
+Q2A)
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+x = np.random.randn(50)
+
+y = np.random.randn(50)
+
+plt.plot(x,y)
+
+plt.show()
+
+plt.scatter(x,y)
+
+plt.show()
+
+plt.hist(x)
+
+plt.show()
+
+plt.boxplot(y, vert=False)
+
+plt.show()
+
+Q2b)
+
+import pandas as p
+
+df = pd.read_csv('C:\\Users\\DELL\\User_Data.csv')
+
+df.shape # no.of rows & cols
+
+df.describe() #stats data
+
+df.info() #features
+
+df.dtypes
